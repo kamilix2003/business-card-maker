@@ -1,11 +1,12 @@
 # Importing BeautifulSoup class from the bs4 module 
 from bs4 import BeautifulSoup 
-from bs4.diagnose import diagnose
+from html2image import Html2Image
 
 file_name = 'sarcasm.html'
 new_file_name = "new.html"
 input_text = "Hello there"
 HTML_PATH = "HTML/{}"
+IMG_PATH = 'img/{}'
 
 
 line_count = 5
@@ -15,18 +16,20 @@ line_prompt_text = 'Input text for line number {}: '
 contact_prompt_text = 'Input contact information\n enter empty line to finish: '
 new_contacts = True
 
-for line in range(line_count):
-    lines.append(input(line_prompt_text.format(line + 1)))
+# for line in range(line_count):
+#     lines.append(input(line_prompt_text.format(line + 1)))
 
-print(contact_prompt_text)
-while new_contacts:
-    new_contact = input()
-    if new_contact == '':
-        new_contacts = False
-        contacts.append('')
-    else:
-        contacts.append(new_contact)
-        
+# print(contact_prompt_text)
+# while new_contacts:
+#     new_contact = input()
+#     if new_contact == '':
+#         new_contacts = False
+#         contacts.append('')
+#     else:
+#         contacts.append(new_contact)
+
+lines = ['test1', 'test2', 'test3', 'test4', 'test5']
+contacts = ['email@net.com', '911', 'net.com']
 print(lines, contacts)
         
 HTMLFile = open(HTML_PATH.format(file_name), "r", encoding="utf8") 
@@ -53,8 +56,9 @@ for contact in contacts:
     contact_element.insert(1, contact)
     parent_element.append(S_contact)
 X = BeautifulSoup(contact_arrow, 'lxml')
-print(X.prettify())
 parent_element.append(X)
 
 new_file = open(HTML_PATH.format(new_file_name), 'w')
 new_file.write(S.prettify())
+
+Html2Image(output_path='img').screenshot(html_file=HTML_PATH.format(new_file_name), save_as='out.jpg')
