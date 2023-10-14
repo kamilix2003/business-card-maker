@@ -1,8 +1,15 @@
 # business-card-maker
 Google definition looking business card generator
 
-## Ids
-- line_x            x - number according to example card
-- contact_x         x - n-th contact
-- contact_parent    div with contact elements
-- contact_text      green text "Contacts:"
+## Example business card
+<img src="img/example.png" width=500px >
+
+## How to
+1. clone repo
+2. run `main.py`
+3. type in your information according to [template](#template)
+4. type in output file name
+5. output file will be created in [img folder](/img/)
+
+## Template 
+<img src="img/template.png" width=500px>
