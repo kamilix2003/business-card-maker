@@ -29,8 +29,8 @@ while new_contacts:
     else:
         contacts.append(new_contact)
 
-lines = ['Nunu and Willump', 'the boy and his yeti', 'adventurer', 'The Freljord is a harsh and unforgiving place', '\"This way to... adventure!" (Willump noises)\"']
-contacts = ['nunu@willump.lol', '9999AP', 'snowball.gg']
+# lines = ['Nunu and Willump', 'the boy and his yeti', 'adventurer', 'The Freljord is a harsh and unforgiving place', '\"This way to... adventure!" (Willump noises)\"']
+# contacts = ['nunu@willump.lol', '9999AP', 'snowball.gg']
 print(lines, contacts)
         
 HTMLFile = open(HTML_PATH.format(file_name), "r", encoding="utf8") 

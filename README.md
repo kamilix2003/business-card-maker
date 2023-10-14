@@ -1,7 +1,7 @@
 # business-card-maker
 Google definition looking business card generator
 
-## Example business card
+## Example card
 <img src="img/example.png" width=500px >
 
 ## How to
